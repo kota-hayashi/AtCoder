@@ -95,26 +95,31 @@
 //    println(count)
 //}
 
+//fun main(args: Array<String>) {
+//    val n = readLine()!!.toInt()
+//    val pList = readLine()!!.split(" ").map(String::toInt)
+//    val dp = Array(n, {arrayOfNulls<Int>(n)})
+//    var count = 0
+//    for (i in 0 until n-1) {
+//        val max = Math.max(pList[i], pList[i+1])
+//        val second = Math.min(pList[i], pList[i+1])
+//        dp[i+1] = second
+//        count += second
+//    }
+//
+//    for (x in 2..n) {
+//        for (i in 0 until  n-x) {
+////            println("i $i i+x ${i+x}")
+//            val max = Math.max(dp[i][i+x-1]!!, dp[i+x-1][i+x]!!)
+//            val second = Math.min(dp[i][i+x-1]!!, dp[i+x-1][i+x]!!)
+//            dp[i][i+x] = max
+//            count += second
+//        }
+//    }
+//
+//}
+
 fun main(args: Array<String>) {
     val n = readLine()!!.toInt()
-    val pList = readLine()!!.split(" ").map(String::toInt)
-    val dp = Array(n, {arrayOfNulls<Int>(n)})
-    var count = 0
-    for (i in 0 until n-1) {
-        val max = Math.max(pList[i], pList[i+1])
-        val second = Math.min(pList[i], pList[i+1])
-        dp[i][i+1] = second
-        count += second
-    }
-
-    for (x in 2..n) {
-        for (i in 0 until  n-x) {
-//            println("i $i i+x ${i+x}")
-            val max = Math.max(dp[i][i+x-1]!!, dp[i+x-1][i+x]!!)
-            val second = Math.min(dp[i][i+x-1]!!, dp[i+x-1][i+x]!!)
-            dp[i][i+x] = max
-            count += second
-        }
-    }
-    println(count)
+    val sList = readLine()!!.split(" ").map(String::toInt)
 }
