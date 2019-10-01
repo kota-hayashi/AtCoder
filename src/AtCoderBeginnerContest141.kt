@@ -1,4 +1,4 @@
-fun a(args: Array<String>) {
+private fun a(args: Array<String>) {
     val t = readLine()!!
     println(when(t) {
         "Sunny" -> "Cloudy"
@@ -8,14 +8,14 @@ fun a(args: Array<String>) {
     })
 }
 
-fun b(args: Array<String>) {
+private fun b(args: Array<String>) {
     val s = readLine()!!
     val a = s.filterIndexed { index, c -> index % 2 == 0 }.all { it != 'L' }
     val b = s.filterIndexed { index, c -> index % 2 == 1 }.all { it != 'R' }
     println(if(a && b) "Yes" else "No")
 }
 
-fun c1(args: Array<String>) {
+private fun c1(args: Array<String>) {
     val (n, k, q) = readLine()!!.split(" ").map(String::toInt)
     val As = Array(q) {
         readLine()!!.toInt()
@@ -32,7 +32,7 @@ fun c1(args: Array<String>) {
     }
 }
 
-fun c(args: Array<String>) {
+private fun c(args: Array<String>) {
     val (n, k, q) = readLine()!!.split(" ").map(String::toInt)
     val As = Array(q) {
         readLine()!!.toInt()
@@ -44,7 +44,7 @@ fun c(args: Array<String>) {
     }
 }
 
-fun d(args: Array<String>) {
+private fun d(args: Array<String>) {
     val (n, m) = readLine()!!.split(" ").map(String::toInt)
     val aList = readLine()!!.split(" ").map(String::toInt).toMutableList()
     val origin = aList.toIntArray().copyOf()
